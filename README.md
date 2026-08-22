@@ -1,13 +1,12 @@
 # App Policies
 
-Public privacy policies and legal documents for applications developed by me.
-
+Public privacy policies, terms, and legal documentation for applications developed by me.
 
 ## Applications
 
 ### PassMancer
 
-An offline password generator and strength analyzer for Android built with a zero-data-collection philosophy.
+PassMancer is a private password generator for creating strong, unique passwords directly on your device.
 
-* **Privacy Policy**: [View Privacy Policy](https://pralhad-nasane.github.io/app-policies/passmancer/privacy-policy/)
-* **Google Play**: [Get it on Google Play](https://play.google.com/store/apps/details?id=com.passmancer.android&pcampaignid=web_share)
+[![Privacy Policy](https://img.shields.io/badge/Privacy_Policy-202124?style=for-the-badge&logo=googledocs&logoColor=white)](https://pralhad-nasane.github.io/app-policies/passmancer/privacy-policy/)
+[![Google Play](https://img.shields.io/badge/Google_Play-202124?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.passmancer.android&pcampaignid=web_share)
