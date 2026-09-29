@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Smooth Calm Warm Linen Base -->
+  <rect width="32" height="32" rx="8" fill="#FBF9F5"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" stroke="#EAE4DC" stroke-width="1"/>
+  
+  <!-- Policy Shield in Claude-style Warm Slate / Charcoal with Delicate Border -->
+  <path d="M16 6.5L24 9.5V16.2C24 21.4 20.6 24.8 16 26.5C11.4 24.8 8 21.4 8 16.2V9.5L16 6.5Z" 
+        fill="url(#slate-grad)" 
+        stroke="#181716" 
+        stroke-width="0.75" 
+        stroke-linejoin="round"/>
+  
+  <!-- Warm Ivory Verification Checkmark -->
+  <path d="M12.5 16.5L14.8 18.8L19.5 14" 
+        stroke="#FBF9F5" 
+        stroke-width="1.75" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <defs>
+    <linearGradient id="slate-grad" x1="16" y1="6.5" x2="16" y2="26.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B2A27"/>
+      <stop offset="1" stop-color="#181716"/>
+    </linearGradient>
+  </defs>
+</svg>
