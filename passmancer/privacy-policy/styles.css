@@ -650,6 +650,98 @@ code {
   margin-top: 0.15rem;
 }
 
+/* Contact Information Card */
+.contact-grid-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contact-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.contact-item-row:not(:last-child) {
+  border-bottom: 1px dashed var(--border-light);
+  padding-bottom: 0.85rem;
+}
+
+.contact-item-label {
+  font-weight: 600;
+  color: var(--ink-secondary);
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contact-item-val {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink-primary);
+  font-weight: 500;
+}
+
+.contact-item-val a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.contact-item-val a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.protected-email-text {
+  color: var(--accent-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: var(--ink-muted);
+  transition: all 0.15s var(--ease-quick);
+  padding: 0;
+  margin-left: 0.35rem;
+}
+
+.copy-email-btn:hover {
+  background: var(--bg-surface);
+  color: var(--ink-primary);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.copy-email-btn.copied {
+  color: var(--success-text);
+  border-color: var(--success-border);
+  background: var(--success-bg);
+}
+
+.copy-email-btn .material-symbols-outlined {
+  font-size: 15px;
+}
+
 /* Navigation step path chips in Section 12 */
 .nav-path {
   display: inline-flex;

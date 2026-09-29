@@ -365,9 +365,14 @@
           </div>
           <div class="contact-item-row">
             <span class="contact-item-label">Support Email</span>
-            <span class="contact-item-val">
+            <span class="contact-item-val email-val-wrapper">
               <span class="material-symbols-outlined" style="font-size: 16px; color: var(--accent-primary);">mail</span>
-              <span>[update soon]</span>
+              <span class="protected-email-text" data-key="cHJhbGhhZC5hcHBzQHByb3Rvbi5tZQ==">
+                <span class="email-text">pralhad.apps [at] proton.me</span>
+              </span>
+              <button type="button" class="copy-email-btn" aria-label="Copy email address" title="Copy email address">
+                <span class="material-symbols-outlined copy-icon">content_copy</span>
+              </button>
             </span>
           </div>
           <div class="contact-item-row">
@@ -457,6 +462,44 @@
     });
 
     sections.forEach(section => observer.observe(section));
+
+    // Obfuscated Email 
+    document.querySelectorAll('.protected-email-text').forEach(el => {
+      const encoded = el.getAttribute('data-key');
+      if (encoded) {
+        try {
+          const decoded = atob(encoded);
+          const textSpan = el.querySelector('.email-text') || el;
+          textSpan.textContent = decoded;
+
+          const wrapper = el.closest('.email-val-wrapper');
+          if (wrapper) {
+            const copyBtn = wrapper.querySelector('.copy-email-btn');
+            if (copyBtn) {
+              copyBtn.addEventListener('click', async (e) => {
+                e.preventDefault();
+                try {
+                  await navigator.clipboard.writeText(decoded);
+                  const icon = copyBtn.querySelector('.copy-icon');
+                  if (icon) {
+                    icon.textContent = 'check';
+                    copyBtn.classList.add('copied');
+                    setTimeout(() => {
+                      icon.textContent = 'content_copy';
+                      copyBtn.classList.remove('copied');
+                    }, 2000);
+                  }
+                } catch (err) {
+                  prompt('Contact email:', decoded);
+                }
+              });
+            }
+          }
+        } catch (e) {
+          console.error('Failed to decode email', e);
+        }
+      }
+    });
   </script>
 
 </body>
