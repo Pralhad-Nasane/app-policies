@@ -192,6 +192,10 @@ body {
   transition: all 0.25s var(--ease-calm);
 }
 
+.app-card:not(:last-child) {
+  margin-bottom: 1.75rem;
+}
+
 .app-card:hover {
   box-shadow: var(--shadow-card-hover);
   border-color: var(--border-subtle);
